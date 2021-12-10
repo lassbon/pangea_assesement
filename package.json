@@ -1,13 +1,13 @@
 {
-    "name": "pangae_next_stage",
+    "name": "pangaea_assignment",
     "version": "1.0.0",
-    "description": "This task was achieved by Steven Omole-Adebomi, a potential fulfilment software engineer at Pangaea.holdings",
+    "description": "Pangaea Take-home assignment",
     "main": "index.js",
     "scripts": {
         "test": "npm run test",
         "start": "node index.js"
     },
-    "author": "Steven Omole-Adebomi",
+    "author": "Abayomi Ajao",
     "license": "ISC",
     "dependencies": {
         "body-parser": "^1.19.0",

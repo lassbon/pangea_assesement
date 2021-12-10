@@ -10,7 +10,9 @@ class PublishController {
 
         const topic = req.path.substr(1,);
         //    validate the body payload
-        if ((data === undefined && typeof data == "object") || topic == undefined || topic.length == 0) { // send a bad request response
+        if ((data === undefined && typeof (data) == "object")
+            || topic == undefined || topic.length == 0) {
+                // send a bad request response
             res.status(400).send({topic, data})
         } else {
 

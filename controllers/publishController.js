@@ -4,6 +4,7 @@ const PubSubHelper = require('../middlewares/pubSubMethods');
 class PublishController {
 
     static publish(req, res) {
+
         const data = req.body;
 
         // strip off the '/' from the request path
@@ -23,7 +24,10 @@ class PublishController {
                 res.status(200).send({topic, data})
 
             } else { // send a Not found response
-                res.status(404).send({topic, data})
+                res.status(404).send(
+                    {
+                        topic, data
+                    })
 
             }
         }

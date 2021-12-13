@@ -1,5 +1,6 @@
-🏡
 Pangaea Take-home assignment
+
+Below is the assessment questioo
 
 For this challenge we'll be creating a HTTP notification system. A server (or set of servers) will keep track of topics ->
 subscribers where a topic is a string and a subscriber is an HTTP endpoint. When a message is published on a topic, it
@@ -14,14 +15,14 @@ POST /subscribe/{topic}
 
 Expected Body
 {
-url: string
+    url: string
 }
 
 Success Response
 
 {
-url: string,
-topic: string
+    url: string,
+    topic: string
 }
 
 Example Request / Response
@@ -31,13 +32,13 @@ Pangaea Take-home assignment
 1POST /subscribe/topic1
 // body
 {
-url: "http://mysubscriber.test"
+    url: "http://mysubscriber.test"
 }
 
 Response:
 {
-url: "http://mysubscriber.test",
-topic: "topic1"
+    url: "http://mysubscriber.test",
+    topic: "topic1"
 }
 
 Publish message to topic
@@ -50,7 +51,7 @@ to publish to topics with no subscribers. If there are multiple subscribers they
 Expected Body
 // must be a javascript object {}, it can contain any keys and have nested data
 {
-[key: string]: any
+    [key: string]: any
 }
 
 Expected Response
@@ -59,8 +60,8 @@ Should give a meaningful HTTP response code based on whether the publish was suc
 
 Payload sent to subscribers
 {
-topic: string
-data: object // whatever data was sent in the publish body
+    topic: string
+    data: object // whatever data was sent in the publish body
 }
 
 Full Examples:
@@ -73,6 +74,3 @@ The above example assumes that the start-server.sh script starts the publisher s
 server is running on port 9000 (subscriber). The subscriber will be getting data forwarded to it when its
 corresponding topic is published, which it will then receive and print the data to verify everything is working at the
 test1 and test2 endpoints.
-
-Pangaea Take-home assignment
-2
